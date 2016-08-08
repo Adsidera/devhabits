@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-  has_many :skills, :goals
+  has_many :goals
 
 end
