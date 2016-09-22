@@ -1,3 +1,6 @@
-.jumbotron
- %h1 Perfect, this is your current goal now:
- %h1= lastgoal.name
+- if user_signed_in?
+ .jumbotron
+  %h1 Perfect, now set your new goal:
+  %h1= @goals.name
+- else
+ %h1= link_to 'Sign in', user_session_path

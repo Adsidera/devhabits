@@ -3,9 +3,6 @@ class GoalsController < ApplicationController
 
   # GET /goals
   # GET /goals.json
-  def index
-    @goals = Goal.all
-  end
 
   # GET /goals/1
   # GET /goals/1.json
@@ -23,6 +20,11 @@ class GoalsController < ApplicationController
 
   # POST /goals
   # POST /goals.json
+  def index
+    @goals = Goal.all
+    goal = Goal.new 
+  end
+
   def create
     @goal = Goal.new(goal_params)
 

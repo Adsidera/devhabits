@@ -20,8 +20,8 @@
             %li= link_to("Goals", goals_path)
             %li= link_to("About")
             %li= link_to("Contact")
-            -if user_signed_in?
-              .btn.btn-default.signin.navbar-btn= link_to 'Sign In', new_user_session_path
-            -else
-              .btn.btn-default.signin.navbar-btn= link_to 'Log Out', destroy_user_session_path, method: :delete
+            - if user_signed_in?
+              .btn.btn-default.signin.navbar-btn= link_to 'Logout', destroy_user_session_path, method: :delete
+            - else
+              .btn.btn-default.signin.navbar-btn= link_to 'Login', user_session_path
     =yield
