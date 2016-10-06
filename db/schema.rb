@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20160810021214) do
   create_table "users", force: :cascade do |t|
     t.string   "firstname"
     t.string   "lastname"
+    t.string   "email"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -43,7 +44,7 @@ ActiveRecord::Schema.define(version: 20160810021214) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-    t.string   "email"
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
