@@ -1,6 +1,13 @@
 - if user_signed_in?
  .jumbotron
+<<<<<<< HEAD
   %h1 Perfect, now to achieve your goal:
   %h1= @goal
 - else
  %h1= link_to 'divide it into smaller tasks', new_skill_path
+=======
+  %h1 Perfect, now set your new goal:
+  %h1= @goals.name
+- else
+ %h1= link_to 'Sign in', user_session_path
+>>>>>>> b5fd48f7cd6132efe782bf12663eb118c52def06

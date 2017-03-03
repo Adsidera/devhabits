@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170225123651) do
+=======
+ActiveRecord::Schema.define(version: 20160810021214) do
+>>>>>>> b5fd48f7cd6132efe782bf12663eb118c52def06
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +25,10 @@ ActiveRecord::Schema.define(version: 20170225123651) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.text     "description"
+<<<<<<< HEAD
     t.integer  "user_id"
+=======
+>>>>>>> b5fd48f7cd6132efe782bf12663eb118c52def06
   end
 
   create_table "skills", force: :cascade do |t|
@@ -45,7 +52,10 @@ ActiveRecord::Schema.define(version: 20170225123651) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
+<<<<<<< HEAD
     t.integer  "goal_id"
+=======
+>>>>>>> b5fd48f7cd6132efe782bf12663eb118c52def06
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end

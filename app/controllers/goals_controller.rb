@@ -1,16 +1,40 @@
 class GoalsController < ApplicationController
   before_action :set_goal, only: [:show, :edit, :update, :destroy]
 
+<<<<<<< HEAD
 
+=======
+  # GET /goals
+  # GET /goals.json
+
+  # GET /goals/1
+  # GET /goals/1.json
+  def show
+  end
+
+  # GET /goals/new
+>>>>>>> b5fd48f7cd6132efe782bf12663eb118c52def06
   def new
     @goal = Goal.new
   end
 
+<<<<<<< HEAD
   def edit
   end
 
   def index
     @goal = Goal.where(id: current_user.goal_id).pluck(:name).first
+=======
+  # GET /goals/1/edit
+  def edit
+  end
+
+  # POST /goals
+  # POST /goals.json
+  def index
+    @goals = Goal.all
+    goal = Goal.new 
+>>>>>>> b5fd48f7cd6132efe782bf12663eb118c52def06
   end
 
   def create
@@ -27,10 +51,13 @@ class GoalsController < ApplicationController
     end
   end
 
+<<<<<<< HEAD
   def show
   end
   
 
+=======
+>>>>>>> b5fd48f7cd6132efe782bf12663eb118c52def06
   # PATCH/PUT /goals/1
   # PATCH/PUT /goals/1.json
   def update
